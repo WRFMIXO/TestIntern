@@ -2,60 +2,82 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Real estate investment opportunity in United Kingdom</title>
-    <link rel="stylesheet" href="styles/home.css"> <!-- Lien vers votre feuille de style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/index.css"> <!-- Lien vers votre feuille de style -->
 </head>
 <body>
     <!-- En tête -->
-    <header class="main-header">
+    <header>
+        <div class="container-fluid p-0">
+            <!--Barre de navigation -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand d-none d-lg-block" href="#"><img src="city_buildings_128px.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><img src="static/home.png" alt="Home">H O M E <span class="sr-only">(current)</span></a>
+                        </li>
 
-        <!--Barre de navigation -->
-        <nav class="navbar">
-            <div class="logo">
-                <img src="logo.png" alt="logo">
-            </div>
-            <!-- Menu -->
-            <ul class="nav-links">
-                <li selected><img src="static/home.png" alt="page d'acceuil"><a href="home.html">HOME</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">P R O J E C T S</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">F A Q</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">C O N T A C T  U S</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Grand titre-->
+            <h1 class="header-title">
+                Real estate<br>
+                investment opprtunity<br>
+                in <span id="highlight">United Kingdom.</span> 
+            </h1>
+
+            <!-- Sous titre-->
+            <h4 class="header-subtitle">
+                Higher yields and lower lower entry threshold than <br>
+                in Western Europe
+            </h4>
+
+            <!-- Liste simple-->
+            <ul class="place-list">
+                <li><img src="static/Location.png" alt="place">Birmingham</li>
+                <li><img src="static/Location.png" alt="place">Manchester</li>
+                <li><img src="static/Location.png" alt="place">Liverpool</li>
+                <li><img src="static/Location.png" alt="place">Brentwood</li>
             </ul>
-        </nav>
 
-        <!-- Grand titre-->
-        <h1 class="header-title">
-            Real estate<br>
-            investment opprtunity<br>
-            in<span id="highlight">United Kingdom.</span> 
-        </h1>
-
-        <!-- Sous titre-->
-        <h4 class="header-subtitle">
-            Higher yields and lower lower entry threshold than <br>
-            in Western Europe
-        </h4>
-
-        <!-- Liste simple-->
-        <ul class="place-list">
-            <li><img src="static/Location.png" alt="place">Birmingham</li>
-            <li><img src="static/Location.png" alt="place">Manchester</li>
-            <li><img src="static/Location.png" alt="place">Liverpool</li>
-            <li><img src="static/Location.png" alt="place">Brentwood</li>
-        </ul>
-
-        <div class="list-with-images">
-            <ul class="image-place-list">
-                <li><img src="static/Location.png" alt="place">London</li>
-            </ul>
-            <div class="header-images">
-                <ul class="image-list">
-                    <li><img src="#" alt="place"></li>
-                    <li><img src="#" alt="place"></li>
-                    <li><img src="#" alt="place"></li>
-                </ul>
+            <div class="header-buttons">
+                <button class="btn btn-warning">View properties <img src="right_35px.png" alt="go"></button>
+                <button class="btn btn-light">Request a call <img src="phone_35px.png" alt="go"></button>
             </div>
+
+            <div class="list-with-images">
+                <img src="big-ben.jpg" class="big-rounded-image">
+                <div class="header-images">
+                     <ul class="image-list">
+                        <li><img src="big-ben.jpg" alt="place" class="image-list-elements"></li>
+                        <li><img src="kitchen.jpg" alt="place" class="image-list-elements"></li>
+                        <li><img src="interior.jpg" alt="place" class="image-list-elements"></li>
+                    </ul>
+                    <p class="overlay-text">
+                        <img src="static/Location.png"> London
+                    </p>
+                </div>
+            </div>
+
         </div>
         
     </header>
@@ -944,5 +966,9 @@
 
         </p>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,126 @@
+body{
+    font-family: 'Segoe UI light';
+}
+header{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    color: white;
+    background-image: url("../london.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    height: 1100px;
+    left: 0;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+}
+.navbar {
+    padding: 25px;
+    margin-right: 250px;
+}
+.navbar ul li{
+    text-align: center;
+    width: 180px;
+    letter-spacing: 1px;
+}
+.navbar-brand{
+    padding: 1em;
+    margin-left: 12em;
+}
+.header-title{
+    position: relative;
+    left: 3.5em;
+    letter-spacing: 1px;
+    font-size: 80px;
+    font-family: 'Segoe UI bold';
+}
+#highlight{
+    background-color: yellow;
+    color: black;
+}
+.header-subtitle{
+    letter-spacing: 1px;
+    font-size: 35px;
+    position: relative;
+    margin: 1em;
+    left: 7em;
+}
+.place-list{
+    list-style-type: none;
+    display: flex;
+    font-size: 25px;
+    position: relative;
+    left: 8.5em;
+}
+.place-list li {
+    margin: 10px;
+    border: 1px solid #0x23201C;
+    width: 200px;
+    text-align: center;
+    background-color: rgba(35, 32, 28, 0.5);
+    border-radius: 7px;
+}
+.place-list li img {
+    margin: 5px;
+}
+.list-with-images {
+    float: right;
+    width: 700px;
+    position: relative;
+    top: -30rem;
+}
+.big-rounded-image{
+    border-top-left-radius: 20em;
+    border-top-right-radius: 20em;
+    position: relative;
+    right: 30rem;
+    top: -10rem;
+    border: 20px solid rgba(142, 133, 117, 0.6);
+    height: 800px;
+    width: 600px;
+    z-index: 0;
+}
+.overlay-text{
+    position: relative;
+    top: -5em;
+    background-color: rgba(142, 133, 117, 0.6);
+    color: whitesmoke;
+    font-size: 23px;
+    width: 180px;
+    text-align: center;
+    height: 50px;
+    justify-content: center;
+    border-radius: 10px;
+}
+.header-images{
+    position: relative;
+    top: -35rem;
+    right: 25rem ;
+}
+.image-list{
+    list-style-type: none;
+    display: flex;
+}
+.image-list-elements{
+    margin-left: 1rem;
+    border-radius: 3rem;
+    border: 15px solid rgba(142, 133, 117, 0.6);
+    width: 400px;
+    height: 310px;
+    z-index: -1;
+}
+.btn{
+    font-size: 25px;
+    width: 300px;
+    height: 90px;
+    border-radius: 10rem;
+    margin: 1rem;
+}
+.header-buttons{
+    position: relative;
+    top: 5rem;
+    left: 15rem ;
+}
