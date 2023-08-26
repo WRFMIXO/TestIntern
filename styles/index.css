@@ -121,24 +121,24 @@ header{
     margin: 0;
 }
 .header-buttons{
-    position: relative;
-    top: 10rem;
-    left: 8rem ;
+    margin-top: 10rem;
+    left: 4rem ;
 }
 .main-about{
     padding: 5rem;
+    height: 900px;
 }
 .main-about h1{
-    font-size: 80px;
+    font-size: 60px;
     font-weight: bold;
 }
 .main-about h4{
-    font-size: 35px;
+    font-size: 28px;
 }
 .main-about p{
 
     margin-top: 4rem;
-    font-size: 22px;
+    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     width: 800px;
     font-weight: 200;
@@ -164,5 +164,36 @@ header{
 }
 .main-about-images{
     float: right;
-    
+    position: relative;
+    top: -45rem;
+    right: -25rem;
+}
+.main-image-semi-rounded{
+    width: 500px;
+    height: 700px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: 20px solid gold;
+    z-index: -1;
+}
+.main-image-rounded{
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    background: white;
+    border: rgba(142, 133, 117, 1);
+    position: relative;
+    right: 40rem;
+    top: -18rem;
+}
+#small-rounded-image{
+    height: 500px;
+    width: 350px;
+    position: relative;
+    top: 15rem;
+    right: 55rem;
+    border-left-color: whitesmoke;
+    border-top-color: whitesmoke;
+    border-bottom-color: whitesmoke;
+    z-index: 0;
 }
