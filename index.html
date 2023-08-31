@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Real estate investment opportunity in United Kingdom</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scripts/bootstrap-5.3.0-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="scripts/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="stylesheet" href="styles/index.css"> <!-- Lien vers votre feuille de style -->
 </head>
 <body>
@@ -128,7 +130,7 @@
                 <div class="left-side-property-location">
                     <img src="static/Location.png" alt="right location image">
                     <p>FIFTH APARTMENTS - WEMLEY PARK</p>
-                    <hr class="small-divider">
+                    <hr class="small-divider"> 
                 </div>
 
                 <h2>Fulton & Fifth Apartments <br>
@@ -136,15 +138,25 @@
                 </h2>
                 
                 <div class="main-first-property-gallery">
-                    <img src="" class="main-first-img1" alt="image">
-                    <img src="" class="main-first-img2" alt="image">
-                    <img src="" class="main-first-img3" alt="image">
-                    <img src="" class="main-first-img4" alt="image">
+                    <ul>
+                        <li class="main-main-first">
+                            <img src="kitchen.jpg" class="main-first-img" alt="image">
+                        </li>
+                        <li class="main-main-first">
+                            <img src="interior.jpg" class="main-first-img" alt="image">
+                        </li>
+                        <li class="main-main-first">
+                            <img src="london.jpg" class="main-first-img" alt="image">
+                        </li>
+                        <li class="main-main-first">
+                            <img src="building.jpg" class="main-first-img" alt="image">
+                        </li>
+                    </ul>
                 </div>
                 
                 <div class="main-first-property-details">
-                    <div class="card bg-white" id="first-property-details">
-                        <div class="card-header">
+                    <div class="card" id="first-property-details">
+                        <div class="card-header" id="first-property-header">
                             <h3 class="card-title">Property Details <img src="static/right.png" alt="Property"></h3>
                         </div>
                         <div class="card-body">
@@ -155,20 +167,39 @@
                                 amenities sitting amongst landscaped gardens,
                                 paved walkways and a new green waterside pa...
                             </p>
-                            <div class="small-divider"></div>
-                            <p class="first-price"><span class="bold">£ 447,500 GBP</span></p>
-                            <p class="starting price">Starting price</p>
-                            <p class="right"><span class="bold">?% P.A</span></p>
-                            <p class="right">Yeild</p>
-                            <div class="small-divider"></div>
-                            <p><span class="bold">51 - 88 SQM</span></p>
-                            <p>1-3 bedrooms</p>
-                            <p><span class="bold">Q1 2025</span></p>
-                            <p>Completion date</p>
+                            <br>
+                            <div class="divider"></div>
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/dollar_account.png" alt="Account"> £447,500 GBP
+                                    <p class="starting-price">Starting Price</p>
+                                </span>
+                                
+                                <span class="bold-right">
+                                    <img src="static/estimates.png" alt="Account"> ?% P.A
+                                    <p class="yeild">Yeild</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
+                            
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/crane_512px.png" alt="Account" class="reduced"> 51 - 58 SQM
+                                    <p class="starting-price-2">1-3 bedrooms</p>
+                                </span>
+                                
+                                <span class="bold-right-2">
+                                    <img src="static/Tear-Off Calendar.png" alt="Account"> Q1 2025
+                                    <p class="yeild">Completion date</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
                         </div>
-                        <div class="card-footer">
-                            <button>Request a call <img src="static/phone.png" alt="call"></button>
-                        </div>
+                            <button type="button" class="warning" id="call1">Request a call <img src="static/phone_512px.png" alt="call" class="reduced"></button>
                     </div>
                 </div>
             </div>
@@ -177,79 +208,86 @@
 
             <!--Benefits-->
             <div class="main-benefits">
-                <h1>Benefits of investing <br>
-                our projects</h1>
-                <p>What are your 4-5 selling points when discussing the real estate
-                investment opportunity with a potential investor ?</p>
-                <ul class="benefits-styled-list">
-                    <li class="card-benefits">
-                        <div>
-                            <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
-                            <button class="btn btn"><img src="" alt="dropdown"></button>
-                        </div>
-                        <div class="small-divider"></div>
-                        <div class="li-element-content">
-                            <p>
-                                Intermark Global experts will create a customized investment
-                                plan for you based on your investment goal, whether it is 
-                                maximum returns or a conservative investment strategy
-                            </p>
-                        </div>
-                    </li>
 
-                    <li class="card-benefits">
-                        <div>
-                            <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
-                            <button class="btn btn"><img src="" alt="dropdown"></button>
-                        </div>
-                        <div class="small-divider"></div>
-                        <div class="li-element-content">
-                            <p>
-                                Intermark Global experts will create a customized investment
-                                plan for you based on your investment goal, whether it is 
-                                maximum returns or a conservative investment strategy
-                            </p>
-                        </div>
-                    </li>
 
-                    <li class="card-benefits">
-                        <div>
-                            <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
-                            <button class="btn btn"><img src="" alt="dropdown"></button>
-                        </div>
-                        <div class="small-divider"></div>
-                        <div class="li-element-content">
-                            <p>
-                                Intermark Global experts will create a customized investment
-                                plan for you based on your investment goal, whether it is 
-                                maximum returns or a conservative investment strategy
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="card-benefits">
-                        <div>
-                            <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
-                            <button class="btn btn"><img src="" alt="dropdown"></button>
-                        </div>
-                        <div class="small-divider"></div>
-                        <div class="li-element-content">
-                            <p>
-                                Intermark Global experts will create a customized investment
-                                plan for you based on your investment goal, whether it is 
-                                maximum returns or a conservative investment strategy
-                            </p>
-                        </div>
-                    </li>
-
-                </ul>
-                
                 <div class="main-benefits-images">
-                    <div class="main-benefits-rounded-image">
-                        <p class="main-benefits-big-round">.</p>
-                        <img src="" alt="Poignée de main">
-                    </div>
+                        <img src="southbank.jpg" alt="Poignée de main" class="main-benefits-rounded-image">
                 </div>
+
+
+                <div class="main-benefits-header">
+                    <h1>Benefits of investing <br>
+                        our projects</h1>
+
+                        <p>What are your 4-5 selling points when discussing the real estate<br>
+                            investment opportunity with a potential investor ?</p>
+                </div>
+               
+                <div class="benefits-styled-list">
+                    <ul>
+                        <li class="card-benefits">
+                            <div>
+                                <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
+                                <button class="btn btn"><img src="" alt="dropdown"></button>
+                            </div>
+                            <div class="small-divider"></div>
+                            <div class="li-element-content">
+                                <p>
+                                    Intermark Global experts will create a customized investment
+                                    plan for you based on your investment goal, whether it is 
+                                    maximum returns or a conservative investment strategy
+                                </p>
+                            </div>
+                        </li>
+    
+                        <li class="card-benefits">
+                            <div>
+                                <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
+                                <button class="btn btn"><img src="" alt="dropdown"></button>
+                            </div>
+                            <div class="small-divider"></div>
+                            <div class="li-element-content">
+                                <p>
+                                    Intermark Global experts will create a customized investment
+                                    plan for you based on your investment goal, whether it is 
+                                    maximum returns or a conservative investment strategy
+                                </p>
+                            </div>
+                        </li>
+    
+                        <li class="card-benefits">
+                            <div>
+                                <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
+                                <button class="btn btn"><img src="" alt="dropdown"></button>
+                            </div>
+                            <div class="small-divider"></div>
+                            <div class="li-element-content">
+                                <p>
+                                    Intermark Global experts will create a customized investment
+                                    plan for you based on your investment goal, whether it is 
+                                    maximum returns or a conservative investment strategy
+                                </p>
+                            </div>
+                        </li>
+    
+                        <li class="card-benefits">
+                            <div>
+                                <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
+                                <button class="btn btn"><img src="" alt="dropdown"></button>
+                            </div>
+                            <div class="small-divider"></div>
+                            <div class="li-element-content">
+                                <p>
+                                    Intermark Global experts will create a customized investment
+                                    plan for you based on your investment goal, whether it is 
+                                    maximum returns or a conservative investment strategy
+                                </p>
+                            </div>
+                        </li>
+    
+                    </ul>
+                </div>
+                
             </div>
             <!--End benefits-->
 

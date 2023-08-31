@@ -57,7 +57,7 @@ header{
 }
 .place-list li {
     margin: 8px;
-    border: 1px solid #0x23201C;
+    border: 1px solid #02320100;
     width: 180px;
     text-align: center;
     background-color: rgba(35, 32, 28, 0.5);
@@ -126,11 +126,12 @@ header{
     left: 5rem ;
 }
 .main-about{
+    position: relative;
     padding: 5rem;
-    height: 1110px;
+    height: 1000px;
 }
 .main-about h1{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
 }
 .main-about h4{
@@ -147,8 +148,8 @@ header{
 }
 .circled-button{
     margin-left: 2rem;
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
     background: transparent;
     border-top-left-radius: 50%;
     border-radius: 100%;
@@ -156,58 +157,64 @@ header{
     box-shadow: 0 0 15px 5px black;
 }
 .circled-button-label{
-    margin-left: 1rem;
-    font-size: 30px;
+    position: relative;
+    left: 1rem;
+    font-size: 20px;
 }
 #getmoreinfo{
-    font-size: 25px;
+    font-size: 18px;
     width: 325px;
 }
 .main-about-images{
     float: right;
-    position: relative;
-    top: -45rem;
-    right: -35rem;
+    position: absolute;
 }
 .main-image-semi-rounded{
-    width: 500px;
-    height: 700px;
+    width: 450px;
+    height: 600px;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border: 20px solid gold;
     z-index: -1;
+    position: relative;
+    top: -40rem;
+    left: 65rem;
+    float: right;
 }
 .main-image-rounded{
-    height: 250px;
-    width: 250px;
+    height: 150px;
+    width: 150px;
     border-radius: 100%;
     background: white;
-    border: rgba(142, 133, 117, 1);
-    position: relative;
-    right: 40rem;
-    top: 0;
+    border: 1px solid rgba(142, 133, 117, 0.5);
     z-index: +1;
     border-right-color: whitesmoke;
+    float: right;
+    position: relative;
+    left: 70rem;
+    top: -32rem;
 }
 #small-rounded-image{
     height: 500px;
     width: 350px;
-    position: relative;
-    top: 15rem;
-    right: 55rem;
+    position: absolute;
+    top: 1px;
+    top: -25rem;
     border-left-color: whitesmoke;
     border-top-color: whitesmoke;
     border-bottom-color: whitesmoke;
+    border-right-color: rgba(142, 133, 117, 0.5);
     z-index: 0;
 }
 .main-first-property{
+    position: relative;
     background-image: url("../interior.jpg");
-    height: 1500px;
+    height: 1000px;
     background-size: cover;
     z-index: -1;
     position: relative;
     background-position: center;
-    color: white;
+    color: cyan;
 }
 .dark-overlay{
     content: "";
@@ -215,7 +222,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    height: 1500px;
+    height: 1000px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
@@ -246,4 +253,167 @@ header{
 .small-divider{
     height: 10px;
     width: 10px;
+}
+#first-property-details{
+    width: 400px;
+    position: relative;
+    top: -10rem;
+    float: right;
+    right: 10rem;
+    border: hidden;
+    border-radius: 5%;
+    padding-top: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-top-left-radius: 40%;
+    background: transparent;
+    color: cyan;
+}
+.divider{
+    height: 1px;
+    background-color: dimgray;
+}
+#first-property-header{
+    background: transparent;
+    border: hidden;
+}
+.bold-left{
+    font-weight: bold;
+    float: left;
+    position: relative;
+    left: 2rem;
+}
+.right{
+    float: right;
+}
+.card-title{
+    float: right;
+    font-weight: bold;
+    background-color: transparent;
+}
+.starting-price{
+    position: relative;
+    left: -3.8rem;
+    top: 0.6rem;
+}
+.bold-right{
+    font-weight: bold;
+    float: right;
+    position: relative;
+    top: -3.5rem;
+    right: 2rem;
+}
+.yeild{
+    position: relative;
+    left: 2.5rem;
+    bottom: 0.5rem;
+    font-weight: normal;
+}
+.reduced{
+    width: 35px;
+}
+.starting-price-2{
+    position: relative;
+    left: -3.3rem;
+    top: 0.6rem;
+}
+.bold-right-2{
+    font-weight: bold;
+    float: right;
+    position: relative;
+    top: -3.5rem;
+    right: -5rem;
+}
+#call1{
+    border: hidden;
+    color: black;
+    width: 280px;
+    height: 60px;
+    text-align: center;
+    background: yellow;
+    font-size: 20px;
+    border-radius: 55px;
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    background-color: rgba(255, 202, 44, 1);
+}
+#call1:hover{
+    width: 350px;
+}
+.main-first-property h2{
+    padding-top: 3%;
+    padding-right: 3%;
+    font-size: 65px;
+    letter-spacing: 10px;
+}
+.main-first-property-gallery{
+    position: relative;
+    float: left;
+    width: 750px;
+}
+.main-first-property-gallery ul{
+    position: relative;
+    list-style-type: none;
+}
+.main-first-property-gallery ul li{
+    position: relative;
+    display: inline-block;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.main-first-img{
+    position: relative;
+    top: -5px;
+    left: -5px;
+    height: 200px;
+    width: 250px;
+    border: 5px solid rgba(142, 133, 117, 0.6);
+    border-radius: 45px;
+}
+.main-first-img:hover{
+    transition: ease-in 500ms;
+    position: relative;
+    top: -5px;
+    left: -5px;
+    height: 200px;
+    width: 300px;
+    border: 5px solid rgba(142, 133, 117, 0.6);
+    border-radius: 45px;
+}
+
+/*Benefits*/
+.main-benefits{
+    width: 1000px;
+    position: relative
+}
+.main-benefits-header{
+    float: right;
+    position: relative;
+    top: -650px;
+    padding-top: 4rem;
+    left: 45rem;
+}
+.main-benefits-header h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+.main-benefits-header p{
+    font-size: 20px;
+}
+.main-benefits-images{
+    position: relative;
+    top: 200px;
+}
+.main-benefits-big-round{
+    color: yellow;
+    position: relative;
+    top: 800px;
+    font-size: 100px;
+}
+.main-benefits-rounded-image{
+    height: 600px;
+    width: 450px;
+    position: relative;
+    left: 20rem;
 }
