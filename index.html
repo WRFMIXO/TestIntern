@@ -12,7 +12,7 @@
 <body>
     <!-- En tête -->
     <header>
-        <div class="container-fluid p-0">
+        <div class="container-fluid p-0" id="container-fluid">
             <!--Barre de navigation -->
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand d-none d-lg-block" href="#"><img src="city_buildings_128px.png" alt="logo"></a>
@@ -227,12 +227,11 @@
                     <ul>
                         <li class="card-benefits">
                             <div>
-                                <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
-                                <button class="btn btn"><img src="" alt="dropdown"></button>
+                                <img src="static/dollar_account.png" alt="wallet"> Capital Growth
+                                <button class="btn btn" id="dropdownButton" onclick="show()"><img src="static/down_button_512px.png" alt="dropdown" class="reduced"></button>
                             </div>
-                            <div class="small-divider"></div>
                             <div class="li-element-content">
-                                <p>
+                                <p class="hidden-item" id="hiddenItem">
                                     Intermark Global experts will create a customized investment
                                     plan for you based on your investment goal, whether it is 
                                     maximum returns or a conservative investment strategy
@@ -242,12 +241,12 @@
     
                         <li class="card-benefits">
                             <div>
-                                <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
-                                <button class="btn btn"><img src="" alt="dropdown"></button>
+                                <img src="static/dollar_account.png" alt="wallet"> Rental Yields
+                                <button class="btn btn" id="dropdownButton" onclick="show()"><img src="static/down_button_512px.png" alt="dropdown" class="reduced"></button>
                             </div>
-                            <div class="small-divider"></div>
+
                             <div class="li-element-content">
-                                <p>
+                                <p class="hidden-item" id="hiddenItem">
                                     Intermark Global experts will create a customized investment
                                     plan for you based on your investment goal, whether it is 
                                     maximum returns or a conservative investment strategy
@@ -257,12 +256,12 @@
     
                         <li class="card-benefits">
                             <div>
-                                <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
-                                <button class="btn btn"><img src="" alt="dropdown"></button>
+                                <img src="static/dollar_account.png" alt="wallet"> Freehold/Leaseholds
+                                <button class="btn btn" id="dropdownButton" onclick="show()"><img src="static/down_button_512px.png" class="reduced" alt="dropdown"></button>
                             </div>
-                            <div class="small-divider"></div>
+
                             <div class="li-element-content">
-                                <p>
+                                <p class="hidden-item" id="hiddenItem">
                                     Intermark Global experts will create a customized investment
                                     plan for you based on your investment goal, whether it is 
                                     maximum returns or a conservative investment strategy
@@ -272,12 +271,12 @@
     
                         <li class="card-benefits">
                             <div>
-                                <img src="static/dollar_account.png" alt="wallet"> <h4>Capital Growth</h4>
-                                <button class="btn btn"><img src="" alt="dropdown"></button>
+                                <img src="static/dollar_account.png" alt="wallet"> Goals to Achieve
+                                <button class="btn btn" id="dropdownButton" onclick="show()"><img src="static/down_button_512px.png" class="reduced" alt="dropdown"></button>
                             </div>
-                            <div class="small-divider"></div>
+
                             <div class="li-element-content">
-                                <p>
+                                <p class="hidden-item" id="hiddenItem">
                                     Intermark Global experts will create a customized investment
                                     plan for you based on your investment goal, whether it is 
                                     maximum returns or a conservative investment strategy
@@ -296,8 +295,8 @@
             <!--Second property-->
             <div class="main-second-property">
                 
-
-                <div class="left-side-property-location">
+                <div class="dark-overlay2"></div>
+                <div class="right-side-property-location">
                     <img src="static/Location.png" alt="left-location-image">
                     <p>LONDON - CHELSEA CREEK</p>
                     <div class="small-divider"></div>
@@ -308,14 +307,14 @@
                 </h2>
 
                 <div class="main-second-property-gallery">
-                    <img src="" class="main-first-img1" alt="image">
-                    <img src="" class="main-first-img2" alt="image">
-                    <img src="" class="main-first-img3" alt="image">
-                    <img src="" class="main-first-img4" alt="image">
-                </div>>
+                    <img src="london.jpg" class="main-first-img1" alt="image">
+                    <img src="southbank.jpg" class="main-first-img1" alt="image">
+                    <img src="interior.jpg" class="main-first-img1" alt="image">
+                    <img src="kitchen.jpg" class="main-first-img1" alt="image">
+                </div>
 
                 <div class="main-second-property-details">
-                    <div class="card bg-white">
+                    <div class="card" id="second-property-details">
                         <div class="card-header">
                             <h3 class="card-title">Property Details <img src="static/right.png" alt="Property"></h3>
                         </div>
@@ -328,20 +327,38 @@
                                 apratements offers views over the landscaped
                                 gardens and canals of Chelsea Creek. ...
                             </p>
-                            <div class="small-divider"></div>
-                            <p class="second-price"><span class="bold">£ 810,000 GBP</span></p>
-                            <p class="starting price">Starting price</p>
-                            <p class="right"><span class="bold">3 - 4% P.A</span></p>
-                            <p class="right">Yeild</p>
-                            <div class="small-divider"></div>
-                            <p><span class="bold">57 - 89 SQM</span></p>
-                            <p>1-2 bedrooms</p>
-                            <p><span class="bold">Q3 2023</span></p>
-                            <p>Completion date</p>
+                            <div class="divider"></div>
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/dollar_account.png" alt="Account"> £ 810, 000 GBP
+                                    <p class="starting-price">Starting Price</p>
+                                </span>
+                                
+                                <span class="bold-right">
+                                    <img src="static/estimates.png" alt="Account"> 3 - 4% P.A
+                                    <p class="yeild">Yeild</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
+                            
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/crane_512px.png" alt="Account" class="reduced"> 57 - 89 SQM
+                                    <p class="starting-price-2">1-2 bedrooms</p>
+                                </span>
+                                
+                                <span class="bold-right-2">
+                                    <img src="static/Tear-Off Calendar.png" alt="Account"> Q3 2023
+                                    <p class="yeild">Completion date</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
                         </div>
-                        <div class="card-footer">
-                            <button>Request a call <img src="static/phone.png" alt="call"></button>
-                        </div>
+                            <button type="button" class="warning" id="call1">Request a call <img src="static/phone_512px.png" alt="call" class="reduced"></button>
                     </div>
                 </div>
 
@@ -352,65 +369,87 @@
 
             <!--How does it work-->
             <div class="main-how-it-work">
-                <h1 class="how-it-work-main-title"> How does it work?</h1>
-                <p>The process of buying a property. Without travelling and opening an account</p>
-
-                <ul class="how-it-work-steps">
-                    <li class="card">
-                        <p>01</p>
-                        <h4>Reservation</h4>
-                        <div class="mini-divider"></div>
-                        <p>
-                            Signing of booking form,
-                            payment of £2,000 - £5,000
-                            per invoice
-                        </p>
-                        <div class="circled-white"></div>
-                    </li>
-
-                    <li class="card">
-                        <p>02</p> <p><img src="" alt="horloge">7-14 days</p>
-                        <h4>Contract preparation</h4>
-                        <div class="mini-divider"></div>
-                        <p>
-                            By law firms In the Uk,
-                            representing the buyer and 
-                            seller in a transaction
-                        </p>
-                        <div class="circled-yellow"></div>
-                    </li>
-
-                    <li class="card">
-                        <p>03</p> <p><img src="" alt="horloge">28 days</p>
-                        <h4>Exchange of contracts</h4>
-                        <div class="mini-divider"></div>
-                        <p>
-                            The legal concept of entering 
-                            into a transaction involves the 
-                            payment of a down payment 
-                            or the full price when
-                            purchasing a cottage
-                        </p>
-                        <div class="circled-white"></div>
-                    </li>
-
-                    <li class="card">
-                        <p>04</p>
-                        <h4>Completion of the transaction</h4>
-                        <div class="mini-divider"></div>
-                        <p>
-                            The legal completion of the 
-                            transaction involves the payment
-                            of the balance of the flat
-                            purchase and the registration of 
-                            ownership rights
-                        </p>
-                        <div class="circled-white"></div>
-                    </li>
-                </ul>
-                <div>
-                    <button class="btn btn">Request a call <img src="static/phone.png" alt="request a call"></button>
+                <div class="main-hiw-header">
+                    <h1> How does it work?</h1>
+                    <p>The process of buying a property. Without travelling and opening an account</p>
                 </div>
+
+                <div class="container-fluid" id="cardContainer">
+                    <div class="row">
+                        <div class="col-md-2" id="col">
+                            <div class="card" id="cartes">
+                                <p class="card-header" id="card01">01</p>
+                                <br>
+
+                                <h4 class="card-title" id="titlesHowItWork">Reservation</h4>
+                                <br>
+                                <div class="mini-divider"></div>
+                                <p class="card-footer" id="f1">
+                                    Signing of booking form,
+                                    payment of £2,000 - £5,000
+                                    per invoice
+                                </p>
+                                <div class="circled-white"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2" id="col">
+                            <div class="card" id="cartes">
+                                <p class="card-header" id="card01">02</p>
+                                <p class="time" id="time"><img src="static/timer_512px.png" class="reduced" alt="timer">7 - 14 days</p>
+                                <br>    
+                                <h4 class="card-title" id="titlesHowItWork">Contract preparation</h4>
+                                <br>
+                                <div class="mini-divider"></div>
+                                <p class="card-footer">
+                                    By law firms In the Uk,
+                                    representing the buyer and 
+                                    seller in a transaction
+                                </p>
+                                <div class="circled-yellow"></div>                             
+                            </div>
+                        </div>
+
+                        <div class="col-md-2" id="col">
+                            <div class="card" id="cartes">
+                                <p class="card-header" id="card01">03</p><p class="time" id="time"><img src="static/timer_512px.png" class="reduced" alt="timer">28 days</p>
+                                <br>
+                                <h4 class="card-title" id="titlesHowItWork">Exchange of contracts</h4>    
+                                <br>       
+                                <div class="mini-divider"></div>
+                                <p class="card-footer">
+                                    The legal concept of entering 
+                                    into a transaction involves the 
+                                    payment of a down payment 
+                                    or the full price when
+                                    purchasing a cottage
+                                </p>     
+                                <div class="circled-white"></div>                         
+                            </div>
+                        </div>
+
+                        <div class="col-md-2" id="col">
+                            <div class="card" id="cartes"> 
+                                <p class="card-header" id="card01">04</p>
+                                <br>
+                                <h4 class="card-title" id="titlesHowItWork4">Completion of the transaction</h4>
+                                <br>
+                                <div class="mini-divider-4"></div>
+                                <p class="card-footer" id="f4">
+                                    The legal completion of the 
+                                    transaction involves the payment
+                                    of the balance of the flat
+                                    purchase and the registration of 
+                                    ownership rights
+                                </p>
+                                <div class="circled-white"></div>                             
+                            </div>
+                        </div>
+                        
+                    </div>          
+                </div>
+                    <button class="btn btn-outline-warning" id="requestAcall">Request a call <img src="static/phone_512px.png" class="reduced" alt="request a call"></button>
+                       
             </div>
             <!--End of how it works-->
             <div class="small-divider"></div>
@@ -418,8 +457,8 @@
             <!--Third property-->
             <div class="main-third-property">
                 
-
-                <div class="right-side-property-location">
+                <div class="dark-overlay3"></div>
+                <div class="left-side-property-location">
                     <img src="static/Location.png" alt="left-location-image">
                     <p>THE HAYDON APTS - UK, LONDON</p>
                     <div class="small-divider"></div>
@@ -430,14 +469,14 @@
                 </h2>
 
                 <div class="main-third-property-gallery">
-                    <img src="" class="main-first-img1" alt="image">
-                    <img src="" class="main-first-img2" alt="image">
-                    <img src="" class="main-first-img3" alt="image">
-                    <img src="" class="main-first-img4" alt="image">
+                    <img src="southbank.jpg" class="main-first-img2" alt="image">
+                    <img src="london.jpg" class="main-first-img2" alt="image">
+                    <img src="kitchen.jpg" class="main-first-img2" alt="image">
+                    <img src="interior.jpg" class="main-first-img2" alt="image">
                 </div>
 
                 <div class="main-third-property-details">
-                    <div class="card bg-white">
+                    <div class="card" id="third-property-details">
                         <div class="card-header">
                             <h3 class="card-title">Property Details <img src="static/right.png" alt="Property"></h3>
                         </div>
@@ -449,20 +488,38 @@
                                 development is beautifully secluded in its own 
                                 urban oasis, yet it has everything at its feet. ...
                             </p>
-                            <div class="small-divider"></div>
-                            <p class="third-price"><span class="bold">£ 900,000 GBP</span></p>
-                            <p class="starting price">Starting price</p>
-                            <p class="right"><span class="bold">?% P.A</span></p>
-                            <p class="right">Projected yeild</p>
-                            <div class="small-divider"></div>
-                            <p><span class="bold">45 SQ.M</span></p>
-                            <p>Studios, 1-3 bedrooms</p>
-                            <p><span class="bold">Q1-Q2 2024</span></p>
-                            <p>Completion date</p>
+                            <div class="divider"></div>
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/dollar_account.png" alt="Account"> £447,500 GBP
+                                    <p class="starting-price">Starting Price</p>
+                                </span>
+                                
+                                <span class="bold-right">
+                                    <img src="static/estimates.png" alt="Account"> ?% P.A
+                                    <p class="yeild">Yeild</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
+                            
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/crane_512px.png" alt="Account" class="reduced"> 51 - 58 SQM
+                                    <p class="starting-price-2">1-3 bedrooms</p>
+                                </span>
+                                
+                                <span class="bold-right-2">
+                                    <img src="static/Tear-Off Calendar.png" alt="Account"> Q1 2025
+                                    <p class="yeild">Completion date</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
                         </div>
-                        <div class="card-footer">
-                            <button>Request a call <img src="static/phone.png" alt="call"></button>
-                        </div>
+                            <button id="call1">Request a call <img src="static/phone_512px.png" alt="call" class="reduced"></button>
                     </div>
                 </div>
 
@@ -474,62 +531,65 @@
             <!--Requirements for purchase-->
             <div class="main-requirements">
                 <h1>Requirements for purchase</h1>
-                <p>List of documents for processing the transaction</p>
+                <p id="zozo">List of documents for processing the transaction</p>
 
-                <ul>
-                    <li></li>
-                </ul><ul class="how-it-work-steps">
-                    <li class="card">
-                        <p>01</p>
-                        <div class="circled">
-                            <img src="" alt="passport">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card" id="cartes2">
+                                <p class="card-header" id="cards01">01</p>
+                                <div class="img">
+                                    <img src="static/checked_identification_documents_512px.png" class="reduced2">
+                                </div>
+                                <div class="mini-divider2"></div>
+                                <h4 class="card-title">Valid passport</h4>
+                                <p class="card-footer">
+                                    Copy of passport or passport of a 
+                                    citizen of another country
+                                </p>
+                            </div>
                         </div>
-                        <h4>Valid Passport</h4>
-                        <div class="mini-divider"></div>
-                        <p>
-                           Copy of passport or passport of a 
-                           citizen of another country
-                        </p>
-                    </li>
 
-                    <li class="card">
-                        <p>02</p>
-                        <div class="circled">
-                            <img src="" alt="Adress">
+                        <div class="col-md-4">
+                            <div class="card" id="cartes2">
+                                <p class="card-header" id="cards01">02</p>
+                                <div class="img">
+                                    <img src="static/home_address_512px.png" class="reduced2">
+                                </div>
+                                <div class="mini-divider2"></div>
+                                <h4 class="card-title">Proof of Address</h4>
+                                <p class="card-footer">
+                                    Copy of passport or passport of a 
+                                    citizen of another country
+                                </p>
+                            </div>
                         </div>
-                        <h4>Proof of address</h4>
-                        <div class="mini-divider"></div>
-                        <p>
-                           Utility bill or bank statement, any
-                           document valid for the purpose
-                        </p>
-                    </li>
 
-                    <li class="card">
-                        <p>03</p>
-                        <div class="circled">
-                            <img src="" alt="funds">
+                        <div class="col-md-4">
+                            <div class="card" id="cartes2">
+                                <p class="card-header" id="cards01">03</p>
+                                <div class="img">
+                                    <img src="static/bonds_512px.png" class="reduced2">
+                                </div>
+                                <div class="mini-divider2"></div>
+                                <h4 class="card-title">Confirmation of Source of Funds</h4>
+                                <p class="card-footer">
+                                    Copy of passport or passport of a 
+                                    citizen of another country
+                                </p>
+                            </div>
                         </div>
-                        <h4>Confirmation of source of funds</h4>
-                        <div class="mini-divider"></div>
-                        <p>
-                            The declaration fo the source of funds 
-                            should be provided in the form of a 
-                            solicitor's statement and a bank
-                            statement from the account where the 
-                            purchase amount is held.
-                        </p>
-                    </li>
-                </ul>
-                <div>
-                    <button class="btn btn">Request a call <img src="static/phone.png" alt="request a call"></button>
+
+                    </div>
                 </div>
+                    <button class="btn btn-outline-warning" id="requestAcall">Request a call <img src="static/phone_512px.png" class="reduced" alt="request a call"></button>
             </div>
             <!--End Requirements-->
 
             <div class="small-divider"></div>
             <!--Fourth property-->
             <div class="main-fourth-property">
+                <div class="dark-overlay4"></div>
 
                 <div class="right-side-property-location">
                     <img src="static/Location.png" alt="left-location-image">
@@ -542,14 +602,14 @@
                 </h2>
 
                 <div class="main-fourth-property-gallery">
-                    <img src="" class="main-fourth-img1" alt="image">
-                    <img src="" class="main-fourth-img2" alt="image">
-                    <img src="" class="main-fourth-img3" alt="image">
-                    <img src="" class="main-fourth-img4" alt="image">
-                </div>>
+                    <img src="london.jpg" class="main-first-img3" alt="image">
+                    <img src="interior.jpg" class="main-first-img3" alt="image">
+                    <img src="big-ben.jpg" class="main-first-img3" alt="image">
+                    <img src="building.jpg" class="main-first-img3" alt="image">
+                </div>
 
                 <div class="main-fourth-property-details">
-                    <div class="card bg-white">
+                    <div class="card" id="fourth-property-details">
                         <div class="card-header">
                             <h3 class="card-title">Property Details <img src="static/right.png" alt="Property"></h3>
                         </div>
@@ -562,20 +622,38 @@
                                 located around a landscaped central square
                                 designed to promote wellness and a rich living. ...
                             </p>
-                            <div class="small-divider"></div>
-                            <p class="second-price"><span class="bold">£ 213,012 GBP</span></p>
-                            <p class="starting price">Starting price</p>
-                            <p class="right"><span class="bold">5% P.A</span></p>
-                            <p class="right">Projected yeild</p>
-                            <div class="small-divider"></div>
-                            <p><span class="bold">40 - 91 SQM</span></p>
-                            <p>1-3 bedrooms</p>
-                            <p><span class="bold">Q2 2026</span></p>
-                            <p>Completion date</p>
+                            <div class="divider"></div>
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/dollar_account.png" alt="Account"> £447,500 GBP
+                                    <p class="starting-price">Starting Price</p>
+                                </span>
+                                
+                                <span class="bold-right">
+                                    <img src="static/estimates.png" alt="Account"> ?% P.A
+                                    <p class="yeild">Yeild</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
+                            
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/crane_512px.png" alt="Account" class="reduced"> 51 - 58 SQM
+                                    <p class="starting-price-2">1-3 bedrooms</p>
+                                </span>
+                                
+                                <span class="bold-right-2">
+                                    <img src="static/Tear-Off Calendar.png" alt="Account"> Q1 2025
+                                    <p class="yeild">Completion date</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
                         </div>
-                        <div class="card-footer">
-                            <button>Request a call <img src="static/phone.png" alt="call"></button>
-                        </div>
+                            <button id="call1">Request a call <img src="static/phone_512px.png" alt="call" class="reduced"></button>
                     </div>
                 </div>
             </div>
@@ -584,16 +662,17 @@
             <div class="small-divider"></div>
 
             <!--More opportunities-->
-            <div class="main-more-opportunities">
-                <div class="right-side-property-location">
+            <div class="container-fluid" id="main-more-opportunities">
+                <div class="left-side-property-location">
                     <img src="static/Location.png" alt="left-location-image">
                     <p>141 - 147 HIGH STREET, BRENTWOOD, CM14 4SA</p>
                     <div class="small-divider"></div>
                 </div>
                 
                 <h2>More opportunities in <br>
-                    Umiya house - Brentwood <img src="" alt="to images">
+                    Umiya house - <span class="yellow">Brentwood</span>
                 </h2>
+                <img src="static/downward_arrow_512px.png" class="downyard" alt="to images">
                 <ul class="more-opportunities-list">
                     <li class="more-opportunities-list-item">
                         Exclusively designed
@@ -606,31 +685,38 @@
                     </li>
                 </ul>
 
-                <p class="more-opportunities-explanations">
-                    This high quality private development known as UMIYA HOUSE offers 19
-                    brand new contemporary one and two bedroom apartments set over 
-                    floors 1-5 with the commercial unit located on the ground floor. The one 
-                    bedroom apartments are 538 sq ft and the two bedroomed apartements range from 
-                    656 sq ft to 956 sq ft.
+                <div class="more-opportunities-explanations">
+                    <p class="more-opportunities-explanations-paragraph">
+                        This high quality private development known as UMIYA HOUSE offers 19<br>
+                        brand new contemporary one and two bedroom apartments set over<br> 
+                        floors 1-5 with the commercial unit located on the ground floor. The one<br> 
+                        bedroom apartments are 538 sq ft and the two bedroomed apartements range from<br> 
+                        656 sq ft to 956 sq ft.
 
-                    Furthermore, all of the properties will be built to a high standard of finish 
-                    and specification that you would expect to see in a development of 
-                    this quality. All of the apartements benefit from a balcony.
-
-                    <button class="btn btn">Download brochure <img src="" alt="brochure"></button>
-                    <button class="btn btn-outlined">Request a call <img src="static/phone.png" alt="Phone call"></button>
-
-                </p>
-                <div class="more-opportunities-explanations-images">
-                    <img src="" class="main-more-opportunities-img1" alt="image">
-                    <img src="" class="main-more-opportunities-img2" alt="image">
-
-                    <p>
-                        <img src="" alt="grue">
-                        <h5>19 + Projects</h5>
-                        <p>Secure your property</p>
-                        <img src="" alt="worker">
+                        <br>
+                        <br>
+    
+                        Furthermore, all of the properties will be built to a high standard of finish<br> 
+                        and specification that you would expect to see in a development of<br> 
+                        this quality. All of the apartements benefit from a balcony.<br>
+    
                     </p>
+
+                    <div class="header-buttons-more">
+                        <button class="btn btn-primary">Download brochure <img src="static/brochure_480px.png" class="reduced" alt="brochure"></button>
+                        <button class="btn btn-dark">Request a call <img src="static/phone.png" alt="Phone call"></button>
+                    </div>
+                </div>
+                <div class="more-opportunities-explanations-images">
+                    <img src="architecture.jpg" class="main-more-opportunities-img1" alt="image">
+                    <img src="interior.jpg" class="main-more-opportunities-img2" alt="image">
+                    <img src="big-ben.jpg" class="main-more-opportunities-img3" alt="image">
+                </div>
+                <div class="main-opportunities-last-div">
+                        <img src="static/crane_512px.png" class="reduced2" alt="grue">
+                        <h5>19 + Projects</h5>
+                        <p id="secure">Secure your property</p>
+                        <img src="static/worker_480px.png" class="reduced2" alt="worker" id="worker">
                 </div>
             </div>
             <!--End More Opportunities-->
@@ -638,7 +724,7 @@
             <div class="small-divider"></div>
             <!--Fifth property-->
             <div class="main-fifth-property">
-                
+                <div class="dark-overlay5"></div>
 
                 <div class="left-side-property-location">
                     <img src="static/Location.png" alt="left-location-image">
@@ -651,14 +737,14 @@
                 </h2>
 
                 <div class="main-fifth-property-gallery">
-                    <img src="" class="main-fifth-img1" alt="image">
-                    <img src="" class="main-fifth-img2" alt="image">
-                    <img src="" class="main-fifth-img3" alt="image">
-                    <img src="" class="main-fifth-img4" alt="image">
-                </div>>
+                    <img src="building.jpg" class="main-first-img4" alt="image">
+                    <img src="big-ben.jpg" class="main-first-img4" alt="image">
+                    <img src="london.jpg" class="main-first-img4" alt="image">
+                    <img src="kitchen.jpg" class="main-first-img4" alt="image">
+                </div>
 
                 <div class="main-fifth-property-details">
-                    <div class="card bg-white">
+                    <div class="card" id="fifth-property-details">
                         <div class="card-header">
                             <h3 class="card-title">Property Details <img src="static/right.png" alt="Property"></h3>
                         </div>
@@ -669,20 +755,38 @@
                                 fashinable. A rooftop pation tops 28 two-
                                 bedroom and 13 one-bedroom apartments on. ...
                             </p>
-                            <div class="small-divider"></div>
-                            <p class="second-price"><span class="bold">£ 262,955 GBP</span></p>
-                            <p class="starting price">Starting price</p>
-                            <p class="right"><span class="bold">5% P.A</span></p>
-                            <p class="right">Projected yeild</p>
-                            <div class="small-divider"></div>
-                            <p><span class="bold">43 - 80 SQM</span></p>
-                            <p>1-2 bedrooms</p>
-                            <p><span class="bold">Q4 2025</span></p>
-                            <p>Completion date</p>
+                            <div class="divider"></div>
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/dollar_account.png" alt="Account"> £447,500 GBP
+                                    <p class="starting-price">Starting Price</p>
+                                </span>
+                                
+                                <span class="bold-right">
+                                    <img src="static/estimates.png" alt="Account"> ?% P.A
+                                    <p class="yeild">Yeild</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
+                            
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/crane_512px.png" alt="Account" class="reduced"> 51 - 58 SQM
+                                    <p class="starting-price-2">1-3 bedrooms</p>
+                                </span>
+                                
+                                <span class="bold-right-2">
+                                    <img src="static/Tear-Off Calendar.png" alt="Account"> Q1 2025
+                                    <p class="yeild">Completion date</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
                         </div>
-                        <div class="card-footer">
-                            <button>Request a call <img src="static/phone.png" alt="call"></button>
-                        </div>
+                            <button id="call1">Request a call <img src="static/phone_512px.png" alt="call" class="reduced"></button>
                     </div>
                 </div>
             </div>
@@ -690,14 +794,17 @@
 
             <!--Get Started-->
             <div class="get-started">
-                <h2>Get Started with us today!</h2>
-                <p>
-                    Suscribe today and receive all the latest updates. <br>
-                    We will be happy to assist you.
-                </p>
-                
-                <div class="get-started-btn">
-                    <button class="btn btn">Get free consultation</button>
+                <div class="get-started-inside">
+                    <h2>Get Started with us today!</h2>
+                    <p>
+                        Suscribe today and receive all the latest updates. <br>
+                        We will be happy to assist you.
+                    </p>
+                    <br>
+                    <div class="background-divider"></div>
+                    <div class="get-started-btn">
+                        <button class="btn btn-warning">Get free consultation</button>
+                    </div>
                 </div>
             </div>
             <!--End Get Startedss-->
@@ -705,7 +812,7 @@
             
             <!--Sixth Property-->
             <div class="main-sixth-property">
-                
+                <div class="dark-overlay6"></div>
 
                 <div class="right-side-property-location">
                     <img src="static/Location.png" alt="left-location-image">
@@ -718,14 +825,14 @@
                 </h2>
 
                 <div class="main-sixth-property-gallery">
-                    <img src="" class="main-sixth-img1" alt="image">
-                    <img src="" class="main-sixth-img2" alt="image">
-                    <img src="" class="main-sixth-img3" alt="image">
-                    <img src="" class="main-sixth-img4" alt="image">
-                </div>>
+                    <img src="london.jpg" class="main-first-img5" alt="image">
+                    <img src="interior.jpg" class="main-first-img5" alt="image">
+                    <img src="kitchen.jpg" class="main-first-img5" alt="image">
+                    <img src="building.jpg" class="main-first-img5" alt="image">
+                </div>
 
                 <div class="main-sixth-property-details">
-                    <div class="card bg-white">
+                    <div class="card" id="sixth-property-details">
                         <div class="card-header">
                             <h3 class="card-title">Property Details <img src="static/right.png" alt="Property"></h3>
                         </div>
@@ -738,20 +845,39 @@
                                 architecture, sustainability, and a first-class
                                 resident experience, the Prestige Collection do. ...
                             </p>
-                            <div class="small-divider"></div>
-                            <p class="second-price"><span class="bold">£ 262,955 GBP</span></p>
-                            <p class="starting price">Starting price</p>
-                            <p class="right"><span class="bold">5% P.A</span></p>
-                            <p class="right">Projected yeild</p>
-                            <div class="small-divider"></div>
-                            <p><span class="bold">43 - 80 SQM</span></p>
-                            <p>1-2 bedrooms</p>
-                            <p><span class="bold">Q4 2025</span></p>
-                            <p>Completion date</p>
+                            <div class="divider"></div>
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/dollar_account.png" alt="Account"> £447,500 GBP
+                                    <p class="starting-price">Starting Price</p>
+                                </span>
+                                
+                                <span class="bold-right">
+                                    <img src="static/estimates.png" alt="Account"> ?% P.A
+                                    <p class="yeild">Yeild</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
+                            
+                            <p class="center">
+                                <span class="bold-left">
+                                    <img src="static/crane_512px.png" alt="Account" class="reduced"> 51 - 58 SQM
+                                    <p class="starting-price-2">1-3 bedrooms</p>
+                                </span>
+                                
+                                <span class="bold-right-2">
+                                    <img src="static/Tear-Off Calendar.png" alt="Account"> Q1 2025
+                                    <p class="yeild">Completion date</p>
+                                </span>
+                                
+                            </p>
+
+                            <div class="divider"></div>
                         </div>
-                        <div class="card-footer">
-                            <button>Request a call <img src="static/phone.png" alt="call"></button>
-                        </div>
+                            <button id="call1">Request a call <img src="static/phone_512px.png" alt="call" class="reduced"></button>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -762,19 +888,20 @@
             <div class="faq">
                 <h2 class="faq-main-title">
                     FAQ
+                    <p>Frequently asked questions</p>
                 </h2>
-                <p>Frequently asked questions</p>
+                
 
-                <div>
+                <div class="container">
                     <ul>
                         <li>
-                            <p><label>1.</label> I don't trust off plan property? <img src="" alt="chevron"></p>
-                            <p>Lorem Ipsum Dolor met</p>                        
+                            <p><label>1.</label> I don't trust off plan property? <button class="btn btn" id="dropdownButton2" onclick="show()"><img src="static/down_button_512px.png" class="reduced" alt="chevron"></button></p>
+                            <p class="hidden-item" id="hiddenItem2">Lorem Ipsum Dolor met</p>                        
                         </li>
 
                         <li>
-                            <p><label>2.</label> What is the insurance it will be ready in time ? <img src="" alt="chevron"></p>
-                            <p>
+                            <p><label>2.</label> What is the insurance it will be ready in time ? <button class="btn btn" id="dropdownButton2" onclick="show()"><img src="static/down_button_512px.png" class="reduced" alt="chevron"></button></p>
+                            <p class="hidden-item" id="hiddenItem2">
                                 This goes back to the credibility of working most pronoun
                                 developers around the country, there is also a longstep date in
                                 all contracts which is a date it has to be completely legally. This is 
@@ -783,29 +910,29 @@
                         </li>
 
                         <li>
-                            <p><label>3.</label> What is the demand that leads to this income ? <img src="" alt="chevron"></p>
-                            <p>Lorem Ipsum Dolor met</p> 
+                            <p><label>3.</label> What is the demand that leads to this income ? <button class="btn btn" id="dropdownButton2" onclick="show()"><img src="static/down_button_512px.png" class="reduced" alt="chevron"> </button></p>
+                            <p class="hidden-item" id="hiddenItem2">Lorem Ipsum Dolor met</p> 
                         </li>
 
                         <li>
                             <p><label>4.</label> Is it allowed for short term rents? If yes what 
-                                are the returns ? <img src="" alt="chevron"></p>
-                                <p>Lorem Ipsum Dolor met</p> 
+                                are the returns ? <button class="btn btn" id="dropdownButton2" onclick="show()"><img src="static/down_button_512px.png" class="reduced" alt="chevron"></button></p>
+                                <p class="hidden-item" id="hiddenItem2">Lorem Ipsum Dolor met</p> 
                         </li>
 
                         <li>
-                            <p><label>5.</label>Can you guys manage it too ? <img src="" alt="chevron"></p>
-                            <p>Lorem Ipsum Dolor met</p> 
+                            <p><label>5.</label>Can you guys manage it too ? <button class="btn btn" id="dropdownButton2" onclick="show()"><img src="static/down_button_512px.png" class="reduced" alt="chevron"></button></p>
+                            <p class="hidden-item" id="hiddenItem2">Lorem Ipsum Dolor met</p> 
                         </li>
 
                         <li>
-                            <p><label>6.</label> What about taxes ? <img src="" alt="chevron"></p>
-                            <p>Lorem Ipsum Dolor met</p> 
+                            <p><label>6.</label> What about taxes ? <button class="btn btn" id="dropdownButton2" onclick="show()"><img src="static/down_button_512px.png" class="reduced" alt="chevron"></button></p>
+                            <p class="hidden-item" id="hiddenItem2">Lorem Ipsum Dolor met</p> 
                         </li>
 
                         <li>
-                            <p><label>1.</label> Is it possible to arrange an appointment online ? <img src="" alt="chevron"></p>
-                            <p>Lorem Ipsum Dolor met</p> 
+                            <p><label>1.</label> Is it possible to arrange an appointment online ? <button class="btn btn" id="dropdownButton2" onclick="show()"><img src="static/down_button_512px.png" class="reduced" alt="chevron"></button></p>
+                            <p class="hidden-item" id="hiddenItem2">Lorem Ipsum Dolor met</p> 
                         </li>
                     </ul>
                 </div>
@@ -1014,5 +1141,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>

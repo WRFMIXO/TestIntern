@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dropdown Button</title>
+</head>
+<body>
+
+    
+    <style>
+        /* Réinitialisation des marges et des puces de la liste */
+        .hidden-item {
+    display: none;
+}
+
+    </style>
+    <ul class="dropdown-list">
+        <li>Élément 1</li>
+        <li class="hidden-item" id="hiddenItem">Élément caché</li>
+        <li>Élément 3</li>
+    </ul>
+    <button id="dropdownButton">Afficher l'élément caché</button>
+    <script>
+        const dropdownButton = document.getElementById('dropdownButton');
+        const hiddenItem = document.getElementById('hiddenItem');
+
+        dropdownButton.addEventListener('click', () => {
+            hiddenItem.style.display = 'block';
+        });
+
+    </script>
+</body>
+</html>
